@@ -1,0 +1,177 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+body {
+    background: rgb(0, 128, 0);
+    background: linear-gradient(90deg, rgb(2, 71, 2) 38%, rgba(13, 121, 13, 0.885) 100%);
+}
+
+.container
+{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.header {
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    transition: all 1s linear;
+
+}
+
+.header a {
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s linear
+}
+
+.header a:hover {
+    color: coral;
+}
+
+.bars {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+.hero {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    margin-top: 25vh;
+}
+.hero h4
+{
+    margin-bottom: 30px;
+}
+.hero h3
+{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.hero h1
+{
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+}
+.hero p
+{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.hero .btn-group
+{
+    display: flex;
+    gap: 20px;
+}
+.hero button
+{
+    background-color: transparent;
+    border: none;
+    padding: 6px 13px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all 0.3s linear;
+}
+.hero button:hover
+{
+    background-color: rgba(13, 121, 13, 0.885);
+    border: none;
+    cursor: pointer;
+    transform: translateX(6%);
+}
+.hero .goblin
+{
+    width: 40vw;
+    margin-left: 15vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .container
+    {
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero .goblin
+    {
+        margin-left: 5vh;
+    }
+    .header ul
+    {
+        display: none;
+        text-align: center;
+        padding: 50px;
+        width: 40%;
+        height: 100%;
+        background-color: rgb(2, 71, 2);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    .header ul li
+    {
+        margin-top: 40px;
+    }
+    .bars
+    {
+        display: block;
+    }
+    #checkbox:checked ~ ul
+    {   
+        display: block;
+    }
+    .header .active
+    {
+        background-color: black;
+        padding: 3px 4px;
+        border-radius: 8px;
+    }
+}
+@media screen and (max-width:660px) {
+    .hero h1
+    {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:560px) {
+    .hero
+    {
+        text-align: left;
+        flex-wrap: wrap;
+    }
+    .hero .goblin
+    {
+        margin-top: 30px;
+        width: 40vh;
+        
+    }
+} 
